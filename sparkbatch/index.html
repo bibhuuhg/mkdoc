@@ -104,7 +104,7 @@ $ python -m sparkbatch --input_data_path &lt;input_data_path&gt; --brand &lt;bra
 <p>python -m sparkbatch --input_data_path "user/bibhu/input/" --brand "clp" --target_dir "/user/bibhu/pyspark_output/"</p>
 <h2 id="step-2-invoke-programatically">Step 2: invoke programatically.</h2>
 <pre><code class="language-python">from sparkbatch.run import get_data_by_brand
-from sparkbatch.spark_utils import write_df_to_target 
+from sparkbatch.utils.spark_utils import write_df_to_target 
 df = get_data_by_brand(data_path : str, brand: str)
 write_df_to_target(df : DataFrame, target_dir: str )
 
