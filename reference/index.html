@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Bibhudutt Mohapatro" /><link rel="canonical" href="https://github.com/bibhuuhg/pyspark-service/reference/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Reference - SparkService</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Reference";
+        var mkdocs_page_input_path = "reference.md";
+        var mkdocs_page_url = "/bibhuuhg/pyspark-service/reference/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SparkService
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../sparkbatch/">SparkBatch</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../gdpr/">GDPR</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Reference</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SparkService</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Reference</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>This part of the project documentation focuses on
+an <strong>information-oriented</strong> approach. Use it as a
+reference for the technical implementation of the
+<code>spark_batch</code> project code.</p>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="sparkbatch.run"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="sparkbatch.run.get_data_by_brand" class="doc doc-heading">
+          <code class="highlight language-python">get_data_by_brand(data_path, brand, logger=logger)</code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Description
+Fetch input data based on brand. </p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data_path</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>Path where input data resides</p>
+              </div>
+            </li>
+            <li>
+              <b><code>brand</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>brand name</p>
+              </div>
+            </li>
+            <li>
+              <b><code>target_dir</code></b>
+              –
+              <div class="doc-md-description">
+                <p>Target dir store the output</p>
+              </div>
+            </li>
+            <li>
+              <b><code>logger</code></b>
+                  (<code><span title="logging.Logger">Logger</span></code>, default:
+                      <code><span title="sparkbatch.run.logger">logger</span></code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Logger instance Defaults to logger.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+          <details class="quote">
+            <summary>Source code in <code>sparkbatch/run.py</code></summary>
+            <pre class="highlight"><code class="language-python">def get_data_by_brand(data_path : str, brand: str, logger: logging.Logger = logger):
+    """
+    Description
+    Fetch input data based on brand. 
+
+    Args:
+        data_path (str): Path where input data resides
+        brand (str):  brand name
+        target_dir: Target dir store the output
+        logger (logging.Logger, optional): Logger instance Defaults to logger.
+    """
+
+    try :
+        logger.info("pyspark batch job execution started ")
+        logger.info ("... starting sparkSession ...")
+        spark = start_spark(spark_config = configuration)
+        logger.info("...sparkSession intialization completed ...")
+        logger.info("data loading started")
+        input_df = spark.read.json(data_path)
+        logger.info(f"data loading completed from data_path : {data_path}")
+        trans_df = get_trans_data_by_df(df = input_df, logger = logger )
+        df_final = trans_df.where(trans_df.brand == brand)
+        return df_final
+    except Exception as ex:
+        logger.info(f"spark batch job failed due to :{ex}")
+        raise ex</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="sparkbatch.utils.spark_utils"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="sparkbatch.utils.spark_utils.start_spark" class="doc doc-heading">
+          <code class="highlight language-python">start_spark(spark_config)</code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Description:
+Start spark session.
+Args:
+    spark_config (dict): Spark configuration object</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+<b><code>SparkSession</code></b>(                <code><span title="pyspark.sql.SparkSession">SparkSession</span></code>
+)            –
+            <div class="doc-md-description">
+              <p>Active spark session</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+          <details class="quote">
+            <summary>Source code in <code>sparkbatch/utils/spark_utils.py</code></summary>
+            <pre class="highlight"><code class="language-python">def start_spark(spark_config: dict) -&gt; SparkSession:
+    """
+    Description:
+    Start spark session.
+    Args:
+        spark_config (dict): Spark configuration object
+
+    Returns:
+        SparkSession: Active spark session
+    """
+
+    conf = SparkConf().setAppName(spark_config['app_name'])
+    conf.setMaster("local")
+    for key, val in spark_config['spark_properties'].items():
+        conf.set(key, val)
+
+    # Start a Spark Session
+    spark = (
+        SparkSession
+        .builder
+        .config(conf = conf)
+        .getOrCreate()
+        )
+    return spark</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="sparkbatch.utils.spark_utils.write_df_to_target" class="doc doc-heading">
+          <code class="highlight language-python">write_df_to_target(df, target_dir, config_dict={}, logger=logger)</code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+
+<details class="description" open>
+  <summary>Description</summary>
+  <p>Method to write/store dataframe output into target_dir in parquet format </p>
+</details>      <p>Args:
+    df (DataFrame): Spark dataframe object
+    target_dir (str): Target directory to store the dataframe output
+    config_dict (Dict[str, Any], optional): Spark related configurations . Defaults to {}.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>sparkbatch/utils/spark_utils.py</code></summary>
+            <pre class="highlight"><code class="language-python">def write_df_to_target( df : DataFrame, target_dir: str , config_dict: Dict[str, Any] = {} , logger : logging.Logger = logger) -&gt; None:
+    """
+    Description:
+        Method to write/store dataframe output into target_dir in parquet format 
+    Args:
+        df (DataFrame): Spark dataframe object
+        target_dir (str): Target directory to store the dataframe output
+        config_dict (Dict[str, Any], optional): Spark related configurations . Defaults to {}.
+    """
+
+    num_partitions = config_dict.get("output_partitions", 1)
+    write_mode = config_dict.get("write_mode", "overwrite")
+    partition_columns_list = config_dict.get("partition_columns", [])
+    logger.info(f"partition coulmn for writing {partition_columns_list}")
+    if len(partition_columns_list) == 0:
+        logger.info(f"proceed writing without partition")
+        df.repartition(num_partitions).write.mode(write_mode).parquet(target_dir)
+    else:
+        logger.info(f"proceed writing with partition")
+        df.repartition(num_partitions).write.mode(write_mode).partitionBy(*partition_columns_list).parquet(target_dir)</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="sparkbatch.utils.log_utils"></a>
+  <div class="doc doc-contents first">
+  
+      <p>Utilities for instantiating a Logger object</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="sparkbatch.utils.log_utils.init_logging" class="doc doc-heading">
+          <code class="highlight language-python">init_logging(logpath, log_file_name='batch_job_log_%Y_%m_%d_%H_%M.log', **kwargs)</code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+
+<details class="description" open>
+  <summary>Description</summary>
+  <p>Function to create a custom logger</p>
+</details>      <p>Args:
+    logpath (str): Directory for saving the logs
+    log_file_name (str, optional): log file name. Defaults to "batch_job_log_%Y_%m_%d_%H_%M.log".</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+                <code><span title="logging.Logger">Logger</span></code>
+            –
+            <div class="doc-md-description">
+              <p>logging.Logger: Logging objects</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+          <details class="quote">
+            <summary>Source code in <code>sparkbatch/utils/log_utils.py</code></summary>
+            <pre class="highlight"><code class="language-python">def init_logging(logpath: str, log_file_name = "batch_job_log_%Y_%m_%d_%H_%M.log", **kwargs) -&gt; logging.Logger:
+    """
+    Description:
+        Function to create a custom logger
+    Args:
+        logpath (str): Directory for saving the logs
+        log_file_name (str, optional): log file name. Defaults to "batch_job_log_%Y_%m_%d_%H_%M.log".
+
+    Returns:
+        logging.Logger: Logging objects
+    """
+    # Initialize Logger and set level to INFO
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.INFO)
+    # Add a formatter
+    formatter = logging.Formatter("%(funcName)s %(levelname)s | %(asctime)s: %(message)s")
+    # The Log file name is combination of log_filoe_name + datetimestamp for suffix
+    log_file_with_time = datetime.now().strftime(log_file_name)
+    log_file = os.path.join(logpath,log_file_with_time)
+    file_handler  = logging.FileHandler(log_file, mode='w')
+    # Add formatter to handler
+    file_handler.setFormatter(formatter)
+    # Add handler to the Logger
+    logger.addHandler(file_handler)
+    return logger</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="sparkbatch.transform.spark_batch"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="sparkbatch.transform.spark_batch.column_encode" class="doc doc-heading">
+          <code class="highlight language-python">column_encode(df, inputcol, outputcol)</code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Description 
+  Method to convert a column and apply One-hot-encode </p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>df</code></b>
+                  (<code><span title="pyspark.sql.DataFrame">DataFrame</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>DataFrame </p>
+              </div>
+            </li>
+            <li>
+              <b><code>inputcol</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>Input column that need to be One-hot-encoded</p>
+              </div>
+            </li>
+            <li>
+              <b><code>outputcol</code></b>
+                  (<code>str</code>)
+              –
+              <div class="doc-md-description">
+                <p>Output column where One-hot-encode needs to store</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+<b><code>DataFrame</code></b>(                <code><span title="pyspark.sql.DataFrame">DataFrame</span></code>
+)            –
+            <div class="doc-md-description">
+              <p>Return Dataframe after One-hot-encode</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+          <details class="quote">
+            <summary>Source code in <code>sparkbatch/transform/spark_batch.py</code></summary>
+            <pre class="highlight"><code class="language-python">def column_encode(df: DataFrame , inputcol: str , outputcol: str) -&gt; DataFrame:
+    """
+    Description 
+      Method to convert a column and apply One-hot-encode 
+
+    Args:
+        df (DataFrame): DataFrame 
+        inputcol (str): Input column that need to be One-hot-encoded
+        outputcol (str): Output column where One-hot-encode needs to store
+
+    Returns:
+        DataFrame:  Return Dataframe after One-hot-encode
+    """
+    cv = CountVectorizer(inputCol = inputcol, outputCol = outputcol, binary = True)
+    df_encode = cv.fit(df).transform(df)
+    # Delete actual column and only keep the encorded valye only
+    df_result = df_encode.drop(inputcol).withColumnRenamed(outputcol, inputcol)
+    return df_result</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="sparkbatch.transform.spark_batch.get_trans_data_by_df" class="doc doc-heading">
+          <code class="highlight language-python">get_trans_data_by_df(df, logger)</code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Description
+   Apply transformation on dataframe</p>
+
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>df</code></b>
+                  (<code><span title="pyspark.sql.DataFrame">DataFrame</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Dataframe </p>
+              </div>
+            </li>
+            <li>
+              <b><code>logger</code></b>
+                  (<code><span title="logging.Logger">Logger</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Logger handler</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+      <ul class="first simple">
+          <li>
+<b><code>DataFrame</code></b>(                <code><span title="pyspark.sql.DataFrame">DataFrame</span></code>
+)            –
+            <div class="doc-md-description">
+              <p>Return Dataframe after apply transformation</p>
+            </div>
+          </li>
+      </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+          <details class="quote">
+            <summary>Source code in <code>sparkbatch/transform/spark_batch.py</code></summary>
+            <pre class="highlight"><code class="language-python">def get_trans_data_by_df(df: DataFrame , logger: logging.Logger ) -&gt; DataFrame:
+    """
+    Description
+       Apply transformation on dataframe
+
+    Args:
+        df (DataFrame): Dataframe 
+        logger (logging.Logger): Logger handler
+
+    Returns:
+        DataFrame: Return Dataframe after apply transformation
+    """
+    logger.info("DataFrame trasformation started")
+    # Extract brand value from the json filenames and store values in new column as "brand"
+    df_with_brand = df.withColumn("brand", element_at(split(element_at(split(input_file_name(),'/'),-1),'-'),1))
+    # Drop all the unwanted columns
+    df_drop_coloumns  = df_with_brand.drop("placeSearchOpeningHours")
+    # Add province columns from adress column
+    df_with_province  = df_drop_coloumns.withColumn("province", concat_ws(':',df_drop_coloumns.address.cityName,df_drop_coloumns.address.postalcode))
+    # Transform geoCoordinates into lat and lon column
+    df_trans_geo = df_with_province.withColumn("lat", df_with_province["geoCoordinates.latitude"]).withColumn("lon", df_with_province["geoCoordinates.longitude"]).drop("geoCoordinates")
+    # Replace NULL values for column handoverServices with empty array . This required for one-hot-encorder
+    fill = array().cast("array&lt;string&gt;")
+    handoverservices = when(col("handoverServices").isNull(), fill).otherwise(col("handoverServices"))
+    df_rm_null = df_trans_geo.withColumn("handoverServices", handoverservices)
+    # Apply onehotencoder for handoverServices columns
+    df_encode = column_encode(df_rm_null,inputcol ="handoverServices", outputcol="handoverServices_ec")
+    # Encrypt the houseNumber and streetName number as they are GDPR. Authorised User can decrypt the GDPR information based on secrete key 
+    df_final = df_encode.withColumn('address',col("address").withField("houseNumber", base64(expr(f"aes_encrypt(address.houseNumber, '{super_secret_key}', 'ECB')")))).withColumn('address',col("address").withField("streetName", base64(expr(f"aes_encrypt(address.streetName, '{super_secret_key}', 'ECB')"))))
+    logger.info("DataFrame trasformation completed")
+    return df_final </code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../gdpr/" class="btn btn-neutral float-left" title="GDPR"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../gdpr/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

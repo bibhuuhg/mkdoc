@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/bibhuuhg/pyspark-service/reference/</loc>
+         <lastmod>2024-03-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/bibhuuhg/pyspark-service/sparkbatch/</loc>
          <lastmod>2024-03-17</lastmod>
          <changefreq>daily</changefreq>
